@@ -1,0 +1,19 @@
+// settings.gradle
+
+pluginManagement {
+    repositories {
+        mavenCentral() // (추가) 플러그인용 저장소
+        gradlePluginPortal()
+    }
+}
+
+// (핵심)
+// 의존성을 관리하는 저장소를 여기에 명시합니다.
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        mavenCentral() // (필수) Gemini 라이브러리가 있는 곳
+    }
+}
+
+rootProject.name = 'kmjoonggo' // (기존 코드)
